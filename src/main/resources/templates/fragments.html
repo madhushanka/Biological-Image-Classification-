@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- Base Home Fragment -->
+<div id="home" class="row justify-content-center mx-md-n5" th:fragment="Home">
+    <div class="card mx-4" style="width: 18rem;">
+        <img class="card-img-top" th:src="@{img/getapi_img.jpg}" alt="Retrieve vector image" width="300" height="250">
+        <div class="card-body">
+            <h5 class="card-title">Retrieve an Image</h5>
+            <p class="card-text">Retrieve an image from the database.</p>
+            <a class="btn btn-primary" onclick="show('getapi_jumbo');">Retrieve</a>
+        </div>
+    </div>
+    <div class="card mx-4" style="width: 18rem;">
+        <img class="card-img-top" th:src="@{img/postapi_img.jpg}" alt="Classify vector image" width="300" height="250">
+        <div class="card-body">
+            <h5 class="card-title">Classify an Image</h5>
+            <p class="card-text">Upload & classify an existing image.</p>
+            <a class="btn btn-primary" onclick="show('postapi_jumbo');">Classify</a>
+        </div>
+    </div>
+</div>
+<!-- GET API Fragment -->
+<div id="getapi_jumbo" style="display:none" class="jumbotron" th:fragment = "GetAPI">
+    <p class="lead">Please enter the name of the image you want to retrieve.</p>
+    <form class="input-group mb-3" method="GET" id="getapi_form" action="/index">
+        <input type="text" name="image_path" class="form-control" placeholder="Image Name" aria-label="Image Name" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="submit">Retrieve</button>
+        </div>
+    </form>
+    <a class="btn btn-outline-secondary" onclick="show('home');">Go Back</a>
+</div>
+
+<!-- POST API Fragment -->
+<div id="postapi_jumbo" style="display:none;" class="jumbotron" th:fragment = "PostAPI">
+    <h2>Bolzano Post API</h2>
+    <form method="POST" enctype="multipart/form-data" id="postapi_form" action="/index">
+        <div class="form-group">
+            <label class="lead" for="image">Please choose the image you wish to classify.</label>
+            <input type="file" name="file" accept=".png, .jpg, .jpeg" class="form-control-file" id="image">
+        </div>
+        <button type="submit" class="btn btn-primary">Classify</button>
+    </form>
+    <a class="btn btn-primary mt-4" onclick="show('home');">Go Back</a>
+</div>
+

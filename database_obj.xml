@@ -1,0 +1,27 @@
+<com.bolzano.database>
+  <url>jdbc:sqlite:model_database.db</url>
+  <cols>
+    <string>nimages</string>
+    <string>comp</string>
+    <string>overlay</string>
+    <string>offset</string>
+    <string>ranges</string>
+    <string>format</string>
+    <string>threshold</string>
+    <string>type</string>
+    <string>lutsize</string>
+    <string>bits_per_pixel</string>
+    <string>samples</string>
+    <string>size</string>
+    <string>selection</string>
+    <string>whiteiszero</string>
+    <string>width</string>
+    <string>byteorder</string>
+    <string>id</string>
+    <string>calibration</string>
+    <string>height</string>
+    <string>path</string>
+    <string>classification</string>
+    <string>image_base46</string>
+  </cols>
+</com.bolzano.database>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+    <object th:include="base_template :: head_tag" th:remove="tag"></object>
+ </head>
+
+<body class="d-flex flex-column h-100">
+
+    <header th:replace="base_template :: header_tag">...</header>
+
+    <main class="flex-grow-0" role="main">
+        <div class="container">
+            <div th:replace="fragments :: Home">...</div>
+            <div th:replace="fragments :: GetAPI">...</div>
+            <div th:replace="fragments :: PostAPI">...</div>
+        </div>
+    </main>
+
+    <footer th:replace="base_template :: footer_tag">...</footer>
+
+
+    <script th:src="@{js/jquery-3.3.1.slim.min.js}"></script>
+    <script th:src="@{js/popper.min.js}"></script>
+    <script th:src="@{js/bootstrap.min.js}"></script>
+
+    <script type="text/javascript">
+        function show(elementId) {
+            document.getElementById("home").style.display="none";
+            document.getElementById("getapi_jumbo").style.display="none";
+            document.getElementById("postapi_jumbo").style.display="none";
+            if (elementId === "home") {
+                document.getElementById(elementId).style.display="flex";
+            }
+            else {
+                document.getElementById(elementId).style.display="block";
+            }
+        }
+    </script>
+
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Results</title>
+    <object th:include="base_template :: head_tag" th:remove="tag"></object>
+</head>
+<body class="d-flex flex-column h-100 error-background-image">
+
+    <header th:replace="base_template :: header_tag">...</header>
+
+    <main class="flex-grow-0" role="main">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="card" style="width: 25rem;">
+                    <div class="card-body">
+                        <h5 class="card-title"><span th:text="${status_code}"></span></h5>
+                        <p class="card-text">Oops, there seems to be some error. <br> <span th:text="${error_message}"></span></p>
+                        <a href="/" class="btn btn-primary">Go back to homepage</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer th:replace="base_template :: footer_tag">...</footer>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head_tag">
+    <meta charset="UTF-8">
+    <title>Bolzano Image Classifier</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link th:href="@{/css/custom.css}" rel="stylesheet">
+</head>
+<body>
+    <header th:fragment="header_tag" class="mb-auto">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="/">Bolzano Image Processor</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </header>
+
+    <footer th:fragment="footer_tag" class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-white"> By <br> Madhusankha, Vinay, Yojana</span>
+        </div>
+    </footer>
+</body>
+</html>
